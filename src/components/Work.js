@@ -10,21 +10,22 @@ import Img3 from "../assets/portfolio-img3.png";
 
 const Work = () => {
   return (
-    <div className="section" id="work">
+    <div className="section " id="work">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-10">
-          <motion.div 
-          variants={fadeIn('right',0.3)}
-          initial='hidden'
-          whileInView={"show"}
-          viewport={{once:false,amount:0.3}}
-          className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0"
+          >
             <div>
               <h2 className="h2 leading-tight text-accent">
                 My Latest <br />
                 Work
               </h2>
-              <p className="max-w-sm mb-8">
+              <p className="max-w-sm mb-16">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation
@@ -48,12 +49,13 @@ const Work = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div 
-           variants={fadeIn('left',0.2)}
-           initial='hidden'
-           whileInView={"show"}
-           viewport={{once:false,amount:0.3}}
-          className="flex-1 flex flex-col gap-y-10">
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 flex flex-col gap-y-10"
+          >
             {/* image */}
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
