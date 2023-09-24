@@ -1,6 +1,8 @@
 import React from "react";
 
-import Image from "../assets/avatar.svg";
+import Image from "../assets/myimg.png";
+import { Link } from "react-scroll";
+import resume from "../assets/resume.jpg"
 
 import {
   FaGithub,
@@ -17,10 +19,11 @@ import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
 
+
 const Banner = () => {
   return (
     <section
-      className="min-h-[85vh] lg:min-h-[78vh] flex items-center mb-52 "
+      className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
       id="home"
     >
       <div className="container mx-auto">
@@ -49,7 +52,7 @@ const Banner = () => {
                   2000,
                   "Designer",
                   2000,
-                  "Video Editor",
+                  "Editor",
                   2000,
                 ]}
                 speed={50}
@@ -63,7 +66,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-3 max-w-lg mx-auto lg:mx-0"
             >
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical
@@ -75,10 +78,10 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
-              </a>
+              <button className="btn btn-lg"><Link
+            to="contact">Contact me</Link></button>
+              <button className="btn btn-lg "><a href={resume} download={resume.jpg}> My Resume</a></button>
+              
             </motion.div>
             <motion.div
               variants={fadeIn("up", 0.6)}
@@ -87,16 +90,16 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#">
+              <a href="https://www.linkedin.com/in/rupesh-pradhan-308621258/">
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a href="https://github.com/merupeshpradhan">
                 <FaGithub />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/mr_rupesh_._/">
                 <FaInstagram />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/merupeshpradhan">
                 <FaFacebook />
               </a>
             </motion.div>
@@ -105,9 +108,9 @@ const Banner = () => {
             variants={fadeIn("down", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] "
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]  "
           >
-            <img src={Image} alt="" />
+            <img src={Image} alt=""/>
           </motion.div>
         </div>
       </div>
