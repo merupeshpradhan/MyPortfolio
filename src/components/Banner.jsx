@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image from "../assets/myimg.png";
+import Image from "../assets/myimg4.png";
 import { Link } from "react-scroll";
 import resume from "../assets/resume.jpg"
 
@@ -23,7 +23,7 @@ import { fadeIn } from "../variants";
 const Banner = () => {
   return (
     <section
-      className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
+      className=" min-h-[85vh] lg:min-h-[78vh] flex items-center"
       id="home"
     >
       <div className="container mx-auto">
@@ -78,9 +78,9 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg"><Link
+              <button className="btn btn-sm"><Link
             to="contact">Contact me</Link></button>
-              <button className="btn btn-lg "><a href={resume} download={resume.jpg}> My Resume</a></button>
+              <button className="btn btn-sm "><a href={resume} download={resume.jpg}> My Resume</a></button>
               
             </motion.div>
             <motion.div
@@ -108,7 +108,7 @@ const Banner = () => {
             variants={fadeIn("down", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]  "
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[300px] border-2 border-white/50 rounded-xl "
           >
             <img src={Image} alt=""/>
           </motion.div>
