@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BiClipboard, BiHomeAlt, BiUser } from "react-icons/bi";
+import { BiHomeAlt, BiUser } from "react-icons/bi";
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from "react-icons/bs";
 
 import { Link } from "react-scroll";
@@ -43,6 +43,7 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
+            offset={70}
             className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsBriefcase />
@@ -52,6 +53,7 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
+            offset={90}
             className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsChatSquareText />
