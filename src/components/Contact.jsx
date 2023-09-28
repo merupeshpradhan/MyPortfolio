@@ -67,7 +67,7 @@ const Contact = () => {
             />
             <textarea
               name="message"
-              className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
+              className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none "
               placeholder="Your message"
             ></textarea>
             {/* <button className="btn btn-lg">Send message</button> */}
