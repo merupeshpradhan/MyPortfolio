@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
 
-import Img1 from "../assets/portfolio-img1.png";
-import Img2 from "../assets/portfolio-img2.png";
-import Img3 from "../assets/portfolio-img3.png";
+import Img1 from "../assets/event.png";
+import Img2 from "../assets/ecom.png";
+import Img3 from "../assets/time.png";
 
 const Work = () => {
   return (
@@ -21,17 +21,22 @@ const Work = () => {
             className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0 "
           >
             <div>
-              <h2 className="h2 leading-tight text-accent">
+              <h2 className="h2 leading-tight text-accent font-semibold">
                 My Latest <br />
-                Work
+                Project's
               </h2>
-              <p className="max-w-sm mb-16">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
+              <h5 className="  leading-tight text-yellow-300 font-semibold mb-1 underline">
+                In my Projects I used  : 
+              </h5>
+              <p className="">
+                <span className="font-semibold">Front-End Technologies : </span> HTML, CSS, JavaScript, React.js
               </p>
+              <p className=" "><span className="font-semibold">Back-End Technologies : </span> Node.js</p>
+              <p className=""><span className="font-semibold">Data Formats : </span>  MongoDB, JSON</p>
+              <p className="mb-4"><span className="font-semibold">UI Frameworks/Libraries : </span> Bootstrap, Material-UI</p>
               <button className="btn btn-sm">View all Project</button>
             </div>
+            <a href="https://merupeshpradhan.github.io/EventBooking.github.io/home.html">
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
@@ -41,13 +46,14 @@ const Work = () => {
               />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">UI/UX Design</span>
+                <span className="text-gradient ">Only Frontend </span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">Event Booking</span>
               </div>
             </div>
+            </a>
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.2)}
@@ -56,8 +62,9 @@ const Work = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex flex-col gap-y-10 justify-end"
           >
-            {/* image */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+           <a href="https://merupeshpradhan.github.io/Cartlane-Clone-Frontend/">
+             {/* image */}
+             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
               <img
@@ -66,14 +73,16 @@ const Work = () => {
               />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">UI/UX Design</span>
+                <span className="text-gradient ">Full Responsive</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">Ecomerce Website(Cartlene clone)</span>
               </div>
             </div>
+           </a>
             {/* image */}
+            <a href="https://merupeshpradhan.github.io/TimeTable.github.io/time.html">
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
@@ -83,13 +92,14 @@ const Work = () => {
               />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">UI/UX Design</span>
+                <span className="text-gradient ">Personal</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">Time Table</span>
               </div>
             </div>
+            </a>
           </motion.div>
         </div>
       </div>
