@@ -56,6 +56,9 @@
   .btn-sm {
     @apply h-[48px] px-6 text-sm;
   }
+  .btn-xs {
+    @apply h-[38px] px-4 text-xs;
+  }
   .btn-lg {
     @apply h-[56px] px-10 text-base;
   }
