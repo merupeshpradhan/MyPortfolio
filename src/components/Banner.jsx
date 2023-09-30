@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "../assets/myimg4.png";
 import { Link } from "react-scroll";
-import resume from "../assets/resume.jpg"
+import resume from "../assets/resume.jpg";
 
 import {
   FaGithub,
@@ -18,7 +18,6 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
-
 
 const Banner = () => {
   return (
@@ -47,14 +46,7 @@ const Banner = () => {
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
-                sequence={[
-                  "Developer",
-                  2000,
-                  "Designer",
-                  2000,
-                  "Editor",
-                  2000,
-                ]}
+                sequence={["Developer", 2000, "Designer", 2000, "Editor", 2000]}
                 speed={50}
                 className="text-accent"
                 wrapper="span"
@@ -68,8 +60,9 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-3 max-w-lg mx-auto lg:mx-0"
             >
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical
+              Dedicated Full-Stack Developer with expertise in designing,
+              developing, and maintaining web applications. Proficient in a wide
+              range of front-end and back-end technologies.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.6)}
@@ -78,10 +71,15 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-sm"><Link
-            to="contact">Contact me</Link></button>
-              <button className="btn btn-sm "><a href={resume} download={resume.jpg}> My Resume</a></button>
-              
+              <button className="btn btn-sm">
+                <Link to="contact">Contact me</Link>
+              </button>
+              <button className="btn btn-sm ">
+                <a href={resume} download={resume.jpg}>
+                  {" "}
+                  My Resume
+                </a>
+              </button>
             </motion.div>
             <motion.div
               variants={fadeIn("up", 0.6)}
@@ -110,7 +108,7 @@ const Banner = () => {
             whileInView={"show"}
             className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[300px] border-2 border-white/50 rounded-xl "
           >
-            <img src={Image} alt=""/>
+            <img src={Image} alt="" />
           </motion.div>
         </div>
       </div>
