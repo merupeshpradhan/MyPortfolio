@@ -3,9 +3,44 @@ import React from "react";
 import { BiHomeAlt, BiUser } from "react-icons/bi";
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from "react-icons/bs";
 
+import { useState,useEffect } from "react";
+
 import { Link } from "react-scroll";
 
 const Nav = () => {
+
+  const [banner, setBanner] = useState(-200);
+  const [service, setService] = useState(-150);    
+  const [about, setAbout] = useState(-150);    
+  const [work, setWork] = useState(-150);    
+  const [contact, setContact] = useState(-150);    
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setBanner(-200); 
+        setService(-100);
+        setAbout(70);
+        setWork(70);
+        setContact(70);
+      } else {
+        setBanner(-250);
+        setService(0);
+        setAbout(0);
+        setWork(0);
+        setContact(0)
+      }
+      
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <nav className="fixed bottom-2  lg:bottom-8 w-full overflow-hidden z-50 ">
       <div className="container mx-auto">
@@ -15,7 +50,7 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
-            offset={-200}
+            offset={banner}
             className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BiHomeAlt />
@@ -25,6 +60,7 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
+            offset={about}
             className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BiUser />
@@ -34,7 +70,8 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
-            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+            offset={service}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center "
           >
             <BsClipboardData />
           </Link>
@@ -43,6 +80,7 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
+            offset={work}
             className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsBriefcase />
@@ -52,6 +90,7 @@ const Nav = () => {
             activeClass="active"
             smooth={true}
             spy={true}
+            offset={contact}
             className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsChatSquareText />

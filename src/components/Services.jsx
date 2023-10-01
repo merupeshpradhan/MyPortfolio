@@ -1,6 +1,5 @@
 import React from "react";
 
-import { BsArrowUpRight } from "react-icons/bs";
 
 import { motion } from "framer-motion";
 
@@ -8,22 +7,39 @@ import { fadeIn } from "../variants";
 
 const services = [
   {
-    name: "UI/UX Design",
+    name: "Programming Languages",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    link: "learn Now ",
+      "Proficiency in one or more programming languages is fundamental. Common languages include JavaScript, Java, C, C++, Python and PHP.",
   },
   {
-    name: "Devlopment",
+    name: "Front-End Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    link: "learn Now ",
+      "Knowledge of front-end technologies like HTML, CSS, and JavaScript, as well as popular libraries and frameworks like React, Angular, or Vue.js.",
   },
   {
-    name: "Editing",
+    name: "Back-End Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    link: "learn Now ",
+      "Expertise in server-side programming, handling requests, managing databases, and building scalable and secure back-end systems",
+  },
+  {
+    name: "Problem-Solving",
+    description:
+      "The ability to analyze complex problems, break them down into smaller components, and develop effective solutions is essential for both roles.",
+  },
+  {
+    name: "Version Control",
+    description:
+      " Knowledge of version control systems like Git and using Git repositories for collaborative development and tracking changes.",
+  },
+  {
+    name: "Software Development Life Cycle (SDLC)",
+    description:
+      "Familiarity with various phases of the SDLC, including requirements analysis, design, development, testing, deployment, and maintenance.",
+  },
+  {
+    name: "User Interface (UI) and User Experience (UX) Design",
+    description:
+      "A basic understanding of UI/UX principles to create user-friendly interfaces.",
   },
 ];
 
@@ -37,9 +53,9 @@ const Services = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0 "
+            className="flex-1 lg:bg-services lg:bg-center  bg-no-repeat mix-blend-lighten mb-12 lg:mb-0 "
           >
-            <h2 className="h2 text-accent mb-6">What I Do </h2>
+            <h2 className="h2 text-accent mb-6 ">What I Know </h2>
             <h3 className="h3 max-w-[455px] mb-16">
               I'm a Fresher in FullStack Developer
             </h3>
@@ -58,7 +74,7 @@ const Services = () => {
                 const { name, description, link } = service;
                 return (
                   <div
-                    className="border-b border-white/20 h-[146px] mb-[38px] flex"
+                    className="border-b border-white/20  mb-[38px] flex"
                     key={index}
                   >
                     <div className=" max-w-[476px]">
@@ -68,18 +84,6 @@ const Services = () => {
                       <p className="font-secondary leading-tight">
                         {description}
                       </p>
-                    </div>
-                    <div className="flex flex-col flex-1 items-end">
-                      <a
-                        href="#"
-                        className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
-                      >
-                        <BsArrowUpRight />
-                      </a>
-                      <a href="#" className="text-gradient text-sm">
-                        {" "}
-                        {link}
-                      </a>
                     </div>
                   </div>
                 );
