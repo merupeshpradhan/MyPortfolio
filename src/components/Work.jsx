@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
 
+
+
 import Img1 from "../assets/event.png";
 import Img2 from "../assets/ecom.png";
 import Img3 from "../assets/time.png";
