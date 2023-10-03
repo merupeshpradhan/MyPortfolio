@@ -71,9 +71,9 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-sm">
+              {/* <button className="btn btn-sm">
                 <Link to="contact">Contact me</Link>
-              </button>
+              </button> */}
               <button className="btn btn-sm ">
                 <a href={resume} download={resume.jpg}>
                   {" "}

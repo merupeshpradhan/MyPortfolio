@@ -2,6 +2,7 @@ import React from "react";
 
 
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 import { fadeIn } from "../variants";
 
@@ -45,8 +46,8 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="section" id="services">
-      <div className="container mx-auto">
+    <section className="section2" id="services">
+      <div className="container mx-auto mt-12">
         <div className="flex flex-col lg:flex-row">
           <motion.div
             variants={fadeIn("right", 0.3)}
@@ -59,7 +60,7 @@ const Services = () => {
             <h3 className="h3 max-w-[455px] mb-16">
               I'm a Fresher in FullStack Developer
             </h3>
-            <button className="btn btn-sm ">See my Work</button>
+            <button className="btn btn-sm "><Link to="work">See My work</Link></button>
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.5)}

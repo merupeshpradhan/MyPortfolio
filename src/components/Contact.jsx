@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 
@@ -9,20 +9,50 @@ import { fadeIn } from "../variants";
 const Contact = () => {
 
   const form = useRef();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isRequiredFieldEmpty, setIsRequiredFieldEmpty] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    // Check if any required fields are empty
+    const requiredFields = ["from_name", "email_id", "message"];
+    const formFields = form.current.elements;
+
+    let isMissingRequiredField = false;
+
+    requiredFields.forEach(fieldName => {
+      if (!formFields[fieldName].value.trim()) {
+        isMissingRequiredField = true;
+      }
+    });
+
+    if (isMissingRequiredField) {
+      setIsRequiredFieldEmpty(true);
+      setIsButtonDisabled(true); // Disable the button immediately
+      setTimeout(() => {
+        setIsRequiredFieldEmpty(false);
+        setIsButtonDisabled(false); // Enable the button after the timer expires
+      }, 3000);
+      return;
+    }
 
     emailjs.sendForm('service_r2o3imk', 'template_o60z4m9', form.current, '16dZT24ZD2v0K0l4b')
       .then((result) => {
           console.log(result.text);
+          setIsSuccess(true);
+
+          // Reset isSuccess after 3 seconds (3000 milliseconds)
+        setTimeout(() => {
+          setIsSuccess(false);
+        }, 3000);
       }, (error) => {
           console.log(error.text);
       });
   };
   return (
     <div className=" section  " id="contact">
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-10">
         <div className="flex flex-col lg:flex-row">
           {/* text */}
           <motion.div
@@ -71,7 +101,9 @@ const Contact = () => {
               placeholder="Your message"
             ></textarea>
             {/* <button className="btn btn-lg">Send message</button> */}
-            <input type="submit" value="Send message" className="btn btn-lg" />
+            {isRequiredFieldEmpty && <p className="text-red-500">Please fill in all required fields.</p>}
+            {isSuccess && <p className="text-green-500">Message successfully sent!</p>}
+            <input type="submit" value="Send message" className="btn btn-lg cursor-pointer" />
 
           </motion.form>
         </div>
