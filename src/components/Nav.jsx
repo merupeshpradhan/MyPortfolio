@@ -22,13 +22,13 @@ const Nav = () => {
         setService(200);
         setAbout(180);
         setWork(200);
-        setContact(200);
+        setContact(199);
       } else {
         setBanner(-250);
-        setService(0);
+        setService(180);
         setAbout(0);
-        setWork(0);
-        setContact(180)
+        setWork(180);
+        setContact(185)
       }
       
     };
