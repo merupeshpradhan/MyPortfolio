@@ -48,7 +48,7 @@ const Work = () => {
 
   return (
     <div className="section " id="work">
-      <div className="container mx-auto mt-[5vh]">
+      <div className="container mx-auto mt-[20vh]">
         <div className="flex flex-col lg:flex-row gap-x-10">
           <motion.div
             variants={fadeIn("right", 0.3)}
