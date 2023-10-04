@@ -19,16 +19,16 @@ const Nav = () => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setBanner(-200); 
-        setService(100);
-        setAbout(100);
-        setWork(100);
-        setContact(100);
+        setService(200);
+        setAbout(180);
+        setWork(200);
+        setContact(200);
       } else {
         setBanner(-250);
         setService(0);
         setAbout(0);
         setWork(0);
-        setContact(0)
+        setContact(180)
       }
       
     };
