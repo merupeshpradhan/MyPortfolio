@@ -17,7 +17,7 @@ function App() {
       <Services />
       <Work />
       <Contact />
-      <div className='h-[300px]'></div>
+      <div className='h-[300px] text-center font-secondary sm:mt-2'>©2023 Copyright : Rupesh Pradhan</div>
     </div>
   )
 }
